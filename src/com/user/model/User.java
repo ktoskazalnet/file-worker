@@ -1,34 +1,33 @@
-package model;
+package com.user.model;
 
 import java.util.Objects;
 
 public class User {
-    private final int ID;
+    private static int CURRENT_ID = 0;
+    private int id;
     private String name;
     private int age;
 
-    public User(int id) {
-        ID = id;
+    public User() {
     }
 
-    public User(int ID, int age) {
-        this.ID = ID;
-        this.age = age;
-    }
-
-    public User(int ID, String name) {
-        this.ID = ID;
+    public User(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
     public User(int id, String name, int age) {
-        this.ID = id;
+        this.id = id;
         this.name = name;
         this.age = age;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public static int getAndIncrementCurrentId() {
+        return ++CURRENT_ID;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
@@ -39,16 +38,20 @@ public class User {
         }
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public String getName() {
         return name;
     }
 
-    public int getID() {
-        return ID;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
@@ -56,18 +59,18 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return ID == user.ID;
+        return id == user.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ID);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + ID +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';

@@ -1,10 +1,11 @@
-package repository;
+package com.user.repository;
 
-import model.User;
+import com.user.model.User;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class UserFileCrudRepository implements UserCrudRepository {
     private final File file;
@@ -15,8 +16,11 @@ public class UserFileCrudRepository implements UserCrudRepository {
 
     @Override
     public User add(User user) {
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
-            bw.write(user.getID() + ";" + user.getName() + ";" + user.getAge());
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
+            int currentId = User.getAndIncrementCurrentId();
+            user.setId(currentId);
+
+            bw.write(currentId + ";" + user.getName() + ";" + user.getAge());
             bw.newLine();
             bw.flush();
         } catch (IOException e) {
@@ -29,14 +33,15 @@ public class UserFileCrudRepository implements UserCrudRepository {
     public boolean deleteById(int id) {
         List<User> userList = getAll();
 
-        try {
-            if (getById(id).getID() == id) {
-                userList.remove(getById(id));
-                save(userList);
-            }
-        } catch (UserNotFoundException e) {
-            System.out.println(e.getMessage());
+        Optional<User> byId = getById(id);
+
+        if (byId.isPresent()) {
+            User user = byId.get();
+            userList.remove(user.getId());
+            save(userList);
+            return true;
         }
+
         return false;
     }
 
@@ -44,24 +49,20 @@ public class UserFileCrudRepository implements UserCrudRepository {
     public User update(User updateWith) {
         List<User> userList = getAll();
 
-        try {
-            for (User user : userList) {
-                if (getById(user.getID()).getID() == updateWith.getID()) {
-                    user.setName(updateWith.getName());
-                    user.setAge(updateWith.getAge());
-                    save(userList);
-                }
+        for (int i = 0; i < userList.size(); i++) {
+            if (userList.get(i).equals(updateWith)) {
+                userList.set(i, updateWith);
+                save(userList);
             }
-        } catch (UserNotFoundException e) {
-            System.out.println(e.getMessage());
         }
-        return null;
+
+        return updateWith;
     }
 
     private List<User> save(List<User> userList) {
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
             for (User user : userList) {
-                bw.write(user.getID() + ";" + user.getName() + ";" + user.getAge());
+                bw.write(user.getId() + ";" + user.getName() + ";" + user.getAge());
                 bw.flush();
                 bw.newLine();
             }
@@ -76,7 +77,7 @@ public class UserFileCrudRepository implements UserCrudRepository {
         String str;
         List<User> userList = new ArrayList<>();
 
-        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((str = br.readLine()) != null) {
                 String[] cols = str.split(";");
 
@@ -93,14 +94,14 @@ public class UserFileCrudRepository implements UserCrudRepository {
     }
 
     @Override
-    public User getById(int id) throws UserNotFoundException {
+    public Optional<User> getById(int id) {
         List<User> userList = getAll();
 
         for (User user : userList) {
-            if (user.getID() == id) {
-                return user;
+            if (user.getId() == id) {
+                return Optional.of(user);
             }
         }
-        throw new UserNotFoundException("User with id: " + id + " not found.");
+        return Optional.empty();
     }
 }
