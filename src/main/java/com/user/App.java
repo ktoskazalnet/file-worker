@@ -23,7 +23,6 @@ public class App {
 
     public static void main(String[] args) {
         try {
-
             UserCrudRepository repository;
 
             if (args[0].equals("file")) {
