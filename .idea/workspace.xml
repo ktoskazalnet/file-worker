@@ -4,34 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70c47da8-3e36-4edb-9494-7e72727cccf7" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="70c47da8-3e36-4edb-9494-7e72727cccf7" name="Changes" comment="Second commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/user/repository/UserMemoryCrudRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/user/service/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.iml" beforeDir="false" afterPath="$PROJECT_DIR$/database.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/exception/UserAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/exception/UserAlreadyExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/exception/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/repository/UserCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/repository/UserCrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/repository/UserFileCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/repository/UserFileCrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/repository/UserMemoryCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/repository/UserMemoryCrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/user/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/user/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/user/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/user/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/user/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/user/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/user/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/user/CalculatorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,28 +43,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.user.repository" />
+      <recent name="com.user.service" />
       <recent name="com.user" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CalculatorTest.multiply">
     <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="database" />
       <extension name="coverage">
@@ -98,9 +82,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalculatorTest.multiply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.user" />
+      <option name="MAIN_CLASS_NAME" value="com.user.CalculatorTest" />
+      <option name="METHOD_NAME" value="multiply(int,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMemoryCrudRepositoryTest.getAll_ShouldReturnUnmodifiableList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.user.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.user.repository.UserMemoryCrudRepositoryTest" />
+      <option name="METHOD_NAME" value="getAll_ShouldReturnUnmodifiableList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.user.service" />
+      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.deleteById_ShouldDeleteUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.user.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.user.service" />
+      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="deleteById_ShouldDeleteUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculatorTest.multiply" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
         <item itemvalue="JUnit.CalculatorTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.deleteById_ShouldDeleteUserById" />
+        <item itemvalue="JUnit.UserMemoryCrudRepositoryTest.getAll_ShouldReturnUnmodifiableList" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668154946613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second commit">
+      <created>1668513705356</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668513705356</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,7 +194,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -25,7 +25,7 @@ class CalculatorTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"2, 2, 4", "-10, 5, -50", "0, 5, 0"})
+    @CsvSource({"20, 2, 40", "-100, 5, -500", "2, 5, 10"})
     void multiply(int a, int b, int expectedResult) {
         Calculator calculator = new Calculator();
         int factResult = calculator.multiply(a, b);
@@ -34,7 +34,7 @@ class CalculatorTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"10, 2, 5", "-10, 2, -5", "3, 0, 0"})
+    @CsvSource({"10, 2, 5", "-10, 2, -5", "3, 1, 3"})
     void divide(int a, int b, int expectedResult) {
         Calculator calculator = new Calculator();
         int factResult = calculator.divide(a, b);
